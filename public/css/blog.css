@@ -1,0 +1,129 @@
+/* ------------------------------
+   BLOG WAVE – TWITTER STYLE DARK
+   ------------------------------ */
+
+body {
+    background: #0d0d0d;
+    color: #ffffff;
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation */
+nav {
+    display: flex;                 /* Utilise Flexbox pour aligner les éléments */
+    justify-content: space-between; /* Espace entre logo et liens */
+    align-items: center;           /* Centre verticalement les éléments */
+    padding: 15px 40px;            /* Espacement interne du nav */
+    background: #1a1a1a;           /* Fond sombre */
+    position: sticky;              /* Reste visible en scrollant */
+    top: 0;                         /* Position en haut de la page */
+    z-index: 1000;                  /* Priorité au-dessus des autres éléments */
+}
+
+/* Logo dans la navigation */
+nav .logo {
+    font-size: 1.5em;      /* Taille du texte du logo */
+    font-weight: bold;      /* Texte en gras */
+    color: #4da6ff;        /* Couleur bleue */
+}
+
+/* Liens de navigation */
+nav .nav-links a {
+    margin-left: 20px;        /* Espace entre les liens */
+    text-decoration: none;    /* Supprime le soulignement */
+    color: #eee;              /* Couleur texte blanche */
+    font-weight: 500;         /* Poids moyen */
+    transition: color 0.3s;   /* Animation lors du survol */
+}
+nav .nav-links a:hover {
+    color: #4da6ff;           /* Change la couleur au survol */
+}
+
+/* Conteneur principal */
+.blog-page {
+    max-width: 750px;
+    margin: 2rem auto;
+    padding: 1.2rem;
+}
+
+/* Titre principal */
+.blog-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+    background: linear-gradient(90deg, #9146ff, #1da1f2);
+    -webkit-text-fill-color: transparent;
+}
+
+.blog-intro {
+    opacity: 0.75;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* ------------------------------
+   CARDS (style Twitter avec glow)
+   ------------------------------ */
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.blog-post {
+    background: #141414;
+    border: 1px solid #2c2c2c;
+    padding: 1.4rem 1.6rem;
+    border-radius: 20px;
+    transition: transform 0.15s ease, background 0.2s ease,
+                border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover inspiré Twitter */
+.blog-post:hover {
+    transform: translateY(-3px);
+    background: #181818;
+    border-color: #3f3f3f;
+    box-shadow: 0 0 15px #9146ff25;
+}
+
+/* Titres des posts */
+.post-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #fff;
+}
+
+/* Métadonnées */
+.post-meta {
+    font-size: 0.9rem;
+    opacity: 0.65;
+    margin-bottom: 0.7rem;
+}
+
+/* Contenu */
+.post-content {
+    line-height: 1.6;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ------------------------------
+   Responsive
+   ------------------------------ */
+
+@media (max-width: 480px) {
+    .blog-page {
+        padding: 0.8rem;
+    }
+    .blog-post {
+        padding: 1.1rem;
+    }
+    .post-title {
+        font-size: 1.15rem;
+    }
+}
