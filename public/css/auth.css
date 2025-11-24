@@ -1,0 +1,177 @@
+/* RESET — retire marges/paddings et uniformise le rendu */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #111;
+    color: #eee;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+/* ============================
+   NAVIGATION WAVE
+   ============================ */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 35px;
+    background: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+/* LOGO */
+nav .logo {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #4da6ff;
+    letter-spacing: 1px;
+}
+
+/* LIENS DE NAVIGATION */
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #eee;
+    font-weight: 500;
+    transition: color 0.25s, opacity 0.25s;
+}
+
+nav .nav-links a:hover {
+    color: #4da6ff;
+    opacity: 0.85;
+}
+
+nav .nav-links a[style*="red"] {
+    color: #ff4d4d !important;
+}
+
+/* ============================
+   TITRES & STRUCTURE GÉNÉRALE
+   ============================ */
+h1 {
+    text-align: center;
+    margin: 25px 0 10px;
+    color: #4da6ff;
+}
+
+main.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ============================
+   FORMULAIRES (connexion / inscription)
+   ============================ */
+form {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 16px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #111;
+    color: #eee;
+}
+
+button,
+input[type="submit"] {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #4da6ff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.25s;
+}
+
+button:hover {
+    background: #3385cc;
+}
+
+/* Messages d'erreur / succès */
+article {
+    padding: 12px;
+    border-radius: 10px;
+    margin: 15px 0;
+    background: #330000;
+    border: 1px solid #660000;
+    color: #ff7777;
+}
+
+.success {
+    background: #003300;
+    border-color: #006600;
+    color: #77ff77;
+}
+
+/* ============================
+   LIENS SECONDS
+   ============================ */
+p a {
+    color: #4da6ff;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1a1a1a;
+    border-top: 1px solid #222;
+    color: #888;
+    margin-top: 40px;
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 20px;
+    }
+    nav .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
